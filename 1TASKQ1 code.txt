@@ -1,0 +1,52 @@
+Q:  Create a directory called ""my_folder"", navigate into it, and create a file named ""my_file.txt"" with some text. Then, create another file named ""another_file.txt"" with some text.   Concatenate the content of ""another_file.txt"" to ""my_file.txt"" and display the updated content. Finally, list all files and directories in the current directory.
+
+
+
+
+
+Microsoft Windows [Version 10.0.22631.4169]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\COURSE\DEVOPS\TASKS>vagrant init
+A `Vagrantfile` has been placed in this directory. You are now
+ready to `vagrant up` your first virtual environment! Please read
+the comments in the Vagrantfile as well as documentation on
+`vagrantup.com` for more information on using Vagrant.
+
+E:\COURSE\DEVOPS\TASKS>vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Box 'base' could not be found. Attempting to find and install...
+    default: Box Provider: virtualbox
+    default: Box Version: >= 0
+==> default: Box file was not detected as metadata. Adding it directly...
+==> default: Adding box 'base' (v0) for provider: virtualbox
+    default: Downloading: base
+    default:
+An error occurred while downloading the remote file. The error
+message, if any, is reproduced below. Please fix this error and try
+again.
+
+Couldn't open file E:/COURSE/DEVOPS/TASKS/base
+
+E:\COURSE\DEVOPS\TASKS>mkdir my_folder
+
+E:\COURSE\DEVOPS\TASKS>cd my_folder
+
+E:\COURSE\DEVOPS\TASKS\my_folder>wsl touch my_file.txt
+
+E:\COURSE\DEVOPS\TASKS\my_folder>wsl echo "Hey! hello." >> my_file.txt
+
+E:\COURSE\DEVOPS\TASKS\my_folder>:q!
+E:\COURSE\DEVOPS\TASKS\my_folder>wsl touch another_file.txt
+
+E:\COURSE\DEVOPS\TASKS\my_folder>wsl echo "yup! what's up." >> another_file.txt
+
+E:\COURSE\DEVOPS\TASKS\my_folder>wsl cat another_file.txt >> my_file.txt
+
+E:\COURSE\DEVOPS\TASKS\my_folder>wsl echo "" > my_file.txt
+
+E:\COURSE\DEVOPS\TASKS\my_folder>wsl echo "hey! hello." >> my_file.txt
+
+E:\COURSE\DEVOPS\TASKS\my_folder>wsl cat another_file.txt>>my_file.txt
+
+E:\COURSE\DEVOPS\TASKS\my_folder>
