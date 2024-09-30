@@ -1,0 +1,38 @@
+Q2: Create 20 files with .txt extensions and rename the first 5 files to .yml extension and Print the latest created top 5 files among the total no of files".
+
+
+Microsoft Windows [Version 10.0.22631.4169]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\COURSE\DEVOPS\TASKS\my_folder2>touch file1{1..20}.txt
+'touch' is not recognized as an internal or external command,
+operable program or batch file.
+
+E:\COURSE\DEVOPS\TASKS\my_folder2>wsl touch file1{1..20}.txt
+
+E:\COURSE\DEVOPS\TASKS\my_folder2>wsl touch file{1..20}.txt
+
+E:\COURSE\DEVOPS\TASKS\my_folder2>wsl rename 's/\.txt$/.yml/' file1.txt
+/bin/bash: rename: command not found
+
+E:\COURSE\DEVOPS\TASKS\my_folder2>mv file1.txt file.yml
+'mv' is not recognized as an internal or external command,
+operable program or batch file.
+
+E:\COURSE\DEVOPS\TASKS\my_folder2>wsl mv file1.txt file1.yml
+
+E:\COURSE\DEVOPS\TASKS\my_folder2>wsl mv file2txt file2.yml
+mv: cannot stat 'file2txt': No such file or directory
+
+E:\COURSE\DEVOPS\TASKS\my_folder2>wsl mv file2.txt file2.yml
+
+E:\COURSE\DEVOPS\TASKS\my_folder2>wsl mv file2.txt file2.yml
+mv: cannot stat 'file2.txt': No such file or directory
+
+E:\COURSE\DEVOPS\TASKS\my_folder2>wsl mv file3.txt file3.yml
+
+E:\COURSE\DEVOPS\TASKS\my_folder2>wsl mv file4.txt file4.yml
+
+E:\COURSE\DEVOPS\TASKS\my_folder2>wsl mv file5.txt file5.yml
+
+E:\COURSE\DEVOPS\TASKS\my_folder2>
